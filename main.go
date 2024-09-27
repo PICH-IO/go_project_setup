@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"thesis_api/configs"
 	"thesis_api/configs/database"
@@ -51,7 +52,7 @@ func main() {
 		AllowMethods: "GET, POST, PUT, DELETE, PATCH",
 	}))
 
-	// fmt.Println("helllo")
+	fmt.Println("helllo")
 
 	routes.SetupRoutes(app, db)
 	log.Fatal(app.Listen(":" + configs.PORT))
